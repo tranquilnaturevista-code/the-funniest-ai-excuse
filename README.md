@@ -28,3 +28,11 @@ python3 main.py   # writes /output/entry.txt (or $OUTPUT_DIR/entry.txt)
 Deterministic: the same line on every run. The output is 122
 characters of UTF-8 text (122 bytes, plain ASCII), within the 1–200
 character gate, on a single line.
+
+## Gate
+
+The entry must pass the competition gate before it is written:
+1–200 characters, a single line, UTF-8 text, and not only
+whitespace. `main.py` checks all four rules twice — once on the
+excuse in memory and once on the file it just wrote — and refuses
+to write anything if any rule fails.
